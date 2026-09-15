@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODEFLOW - Universal Visual Execution & AI Reasoning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Toolbar -->
+        <header id="toolbar">
+            <div class="logo">CODEFLOW</div>
+            
+            <!-- Language Selector Container -->
+            <div id="language-selector-container" style="flex: 1; max-width: 300px;"></div>
+            
+            <!-- Execution Controls Container -->
+            <div id="execution-controls-container" style="flex: 1; display: flex; justify-content: flex-end; gap: 8px;"></div>
+            
+            <div style="flex: 1;"></div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Source Code Panel -->
+            <section id="source-code-panel">
+                <div class="panel-header">
+                    <h3>Source Code</h3>
+                    <div class="line-numbers" id="line-numbers"></div>
+                </div>
+                <textarea id="source-code-textarea" placeholder="Enter your code here..."></textarea>
+            </section>
+
+            <!-- Visualization Panel -->
+            <section id="visualization-panel">
+                <div class="panel-header">
+                    <h3>Visualization</h3>
+                    <div class="controls">
+                        <span>Instruction:</span>
+                        <span id="instruction-display">No instruction yet.</span>
+                    </div>
+                </div>
+                <div id="visualization-panels">
+                    <!-- Rendered by UniversalVisualizer -->
+                </div>
+            </section>
+
+            <!-- Program State Panel -->
+            <section id="program-state-panel">
+                <div class="panel-header">
+                    <h3>Program State</h3>
+                </div>
+                <div id="variables-panel">
+                    <h4>Variables</h4>
+                    <ul id="variables-list"></ul>
+                </div>
+                <div id="values-panel">
+                    <h4>Values</h4>
+                    <pre id="values-output"></pre>
+                </div>
+                <div id="types-panel">
+                    <h4>Types</h4>
+                    <p id="type-display">No types defined yet.</p>
+                </div>
+            </section>
+
+            <!-- Execution Explanation Panel -->
+            <section id="execution-explanation-panel">
+                <div class="panel-header">
+                    <h3>Execution Explanation</h3>
+                </div>
+                <div id="explanation-content">
+                    <p>Press "Run" to execute code and see step-by-step execution traces.</p>
+                </div>
+            </section>
+
+            <!-- Output Panel -->
+            <section id="output-panel">
+                <div class="panel-header">
+                    <h3>Output</h3>
+                </div>
+                <div id="output-log">
+                    <p>Output will appear here.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="/src/ui/CodeFlowApp.ts"></script>
+</body>
+</html>
